@@ -1,0 +1,18 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : celeg.ga
+Graph 2                        : dmela.ga
+Output File                    : celeg.ga_dmela.ga.out
+(V1,E1)                        : (0,0)
+(V2,E2)                        : (0,0)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 15
+num-ants                       : 5
+rho                            : 0.8
+trail_max/trail_min            : 0
+trail_mid/trail_min            : nan
+alpha                          : 0.3(0.7*blat)
+algorithm                      : 1(+pheromone;)
+local search                   : 1

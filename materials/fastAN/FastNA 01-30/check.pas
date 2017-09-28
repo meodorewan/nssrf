@@ -1,0 +1,116 @@
+const           fi1             ='mm.ga';
+                fi2             ='hs.ga';
+
+var             g1              :array[1..1000000,1..2]of longint;
+                g2              :array[1..20000,1..20000]of longint;
+                similar         :array[1..20000,1..20000]of real;
+                d1,d2,r,dx      :array[1..20000]of longint;
+                n1,n2,m1,m2,m,mt:longint;
+                f               :text;
+                i,j,k           :longint;
+                err             :string;
+                s,alpha         :extended;
+                svung,sdinh     :longint;
+                maxsdinh,maxscanh,lvung:longint;
+
+procedure go(i:integer);
+var j   :longint;
+ begin
+   dx[i]:=svung; inc(sdinh);
+   for j:=1 to n2 do
+     if (dx[j]=0)and(g2[i,j]=2) then begin
+        go(j);
+     end;
+ end;
+
+BEGIN
+   assign(f,fi1); reset(f);
+   readln(f,n1,m1);
+   for k:=1 to m1 do begin
+      readln(f,i,j);
+      g1[k,1]:=i+1;
+      g1[k,2]:=j+1;
+   end;
+   close(f);
+
+   assign(f,fi2); reset(f);
+   readln(f,n2,m2);
+   for k:=1 to m2 do begin
+      readln(f,i,j);
+      g2[i+1,j+1]:=1;
+      g2[j+1,i+1]:=1;
+   end;
+   close(f);
+
+   assign(f,fi1+'_'+fi2+'.pin'); reset(f);
+   while not seekeof(f) do begin
+      readln(f,i,j,similar[i+1][j+1]);
+   end;
+   close(f);
+
+   err:='Dung';
+   s:=0;
+   assign(f,fi1+'_'+fi2+'.out'); reset(f);
+   readln(f,m);
+   for k:=1 to n1 do begin
+      readln(f,i,j);
+
+      if (i<0)or(i>=n1)or(d1[i+1]=1) then
+        begin err:='chi so dinh sai'; break; end;
+
+      d1[i+1]:=1;
+      if j=-1 then begin r[i+1]:=-1; continue; end;
+
+      if (j<0)or(j>=n2)or(d2[j+1]=1) then
+        begin err:='chi so dinh sai'; break; end;
+
+      r[i+1]:=j+1;
+
+      d2[j+1]:=1;
+      s:= s + similar[i+1,j+1];
+   end;
+   close(f);
+
+   mt:=0;
+   for k:=1 to m1 do begin
+        if (r[g1[k,1]]>-1) and (r[g1[k,2]]>-1) then
+           mt:=mt + g2[r[g1[k,1]],r[g1[k,2]]];
+   end;
+
+   writeln(err);
+   writeln(m);
+   writeln(mt);
+
+   for k:=3 to 7 do begin
+        alpha:=k / 10;
+        writeln(alpha:0:2,': ',alpha*mt+(1-alpha)*s:0:5);
+   end;
+
+   for k:=1 to m1 do begin
+        if (r[g1[k,1]]>-1) and (r[g1[k,2]]>-1) and (g2[r[g1[k,1]],r[g1[k,2]]]=1) then begin
+                g2[r[g1[k,1]],r[g1[k,2]]]:=2;
+                g2[r[g1[k,2]],r[g1[k,1]]]:=2;
+        end;
+   end;
+
+   for k:=1 to n2 do
+     if dx[k]=0 then begin
+        inc(svung);
+        sdinh:=0;
+
+        go(k);
+
+        if sdinh>maxsdinh then begin
+                maxsdinh:=sdinh;
+                lvung:=svung;
+        end;
+     end;
+
+   writeln('so vung : ',svung);
+   writeln('so nut : ',maxsdinh);
+   for i:=1 to n2 do
+     if dx[i]=lvung then
+     for j:=i+1 to n2 do
+       if (dx[j]=lvung)and(g2[i,j]=2) then inc(maxscanh);
+   writeln('so canh :',maxscanh);
+END.

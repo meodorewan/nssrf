@@ -1,0 +1,18 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : dmela.ga
+Graph 2                        : hsapi.ga
+Output File                    : dmela.ga_hsapi.ga.out
+(V1,E1)                        : (7518,25635)
+(V2,E2)                        : (9633,34327)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 1
+num-ants                       : 1
+rho                            : 0.8
+trail_max/trail_min            : 17151
+trail_mid/trail_min            : 1
+alpha                          : 0.3(0.7*blat)
+algorithm                      : 2(-graphlet;+pheromone;)
+local search                   : 1

@@ -1,0 +1,22 @@
+ACO for Graph Alignment Problem
+Graph 1                        : sc.ga
+Graph 2                        : sc.ga
+Output File                    : sc.ga_sc.ga.out
+(V1,E1)                        : (5524,82656)
+(V2,E2)                        : (5524,82656)
+
+Parameter-settings
+max-tries                      : 10
+max-time                       : 0s
+number of iteration            : 300
+number of reset pheremone      : 10
+num-ants                       : 30
+alpha                          : 1
+beta                           : 1
+rho                            : 0.5
+local search                   : 4
+algorithm                      : 1
+trail_max/trail_min            : 11048
+trail_mid/trail_min            : 1
+
+start try 1 ...

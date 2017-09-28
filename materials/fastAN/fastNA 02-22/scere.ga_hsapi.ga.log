@@ -1,0 +1,29 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : scere.ga
+Graph 2                        : hsapi.ga
+Output File                    : scere.ga_hsapi.ga.out
+(V1,E1)                        : (5499,31261)
+(V2,E2)                        : (9633,34327)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 1
+num-ants                       : 5
+rho                            : 0.8
+trail_max/trail_min            : 15132
+trail_mid/trail_min            : 1
+alpha                          : 0.001(0.999*blat)
+algorithm                      : 2(-graphlet;+pheromone;)
+local search                   : 1
+
+start try 1 ...
+0 : 149.002(4201,2554,3439) -> 150.024(3948,2354,3140)
+1 : 149.631(4248,2483,3482)
+2 : 147.232(3876,2277,3005) -> 148.292(3855,2338,2983) -> 149.587(3923,2423,3203)
+3 : 148.941(4168,2492,3403)
+4 : 147.473(4051,2475,3246) -> 149.62(4024,2391,3225)
+Iteration     0 time 513.382 -----> Best : 150.024(3948,2354,3140)
+Best Solution in try   1 is 150.024(3948,2354,3140) at iterations 0 time 513.382
+Best : 150.024(3948,2354,3140) Worst : 150.024 Avg : 150.024
+time total : 515.671s

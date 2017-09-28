@@ -1,0 +1,41 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : celeg.ga
+Graph 2                        : hsapi.ga
+Output File                    : celeg.ga_hsapi.ga.out
+(V1,E1)                        : (2805,4495)
+(V2,E2)                        : (9633,34327)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 15
+num-ants                       : 5
+rho                            : 0.8
+trail_max/trail_min            : 12438
+trail_mid/trail_min            : 1
+alpha                          : 0.005(0.995*blat)
+algorithm                      : 2(-graphlet;+pheromone;)
+local search                   : 1
+
+start try 1 ...
+0 : 85.2677(912,169,180)
+1 : 85.5754(914,273,292)
+2 : 85.6687(894,191,197)
+3 : 84.7072(898,280,292) -> 85.1814(842,196,200)
+4 : 85.9893(943,256,268)
+Iteration     0 time  65.049 -----> Best : 85.989(943,256,268)
+5 : 86.134(923,268,282)
+6 : 86.072(902,212,222)
+7 : 85.841(911,235,243)
+8 : 86.623(948,297,316)
+9 : 86.578(973,392,419)
+Iteration     1 time 126.126 -----> Best : 86.623(948,297,316)
+10 : 86.989(943,249,261)
+11 : 86.582(920,277,289)
+12 : 86.818(938,320,338)
+13 : 86.770(943,345,358)
+14 : 86.883(946,303,325)
+Iteration     2 time 192.586 -----> Best : 86.989(943,249,261)
+Best Solution in try   1 is 86.989(943,249,261) at iterations 2 time 192.586
+Best : 86.989(943,249,261) Worst : 86.989 Avg : 86.989
+time total : 194.141s

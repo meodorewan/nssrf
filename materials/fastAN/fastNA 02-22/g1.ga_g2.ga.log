@@ -1,0 +1,38 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : g1.ga
+Graph 2                        : g2.ga
+Output File                    : g1.ga_g2.ga.out
+(V1,E1)                        : (0,0)
+(V2,E2)                        : (0,0)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 15
+num-ants                       : 5
+rho                            : 0.8
+trail_max/trail_min            : 0
+trail_mid/trail_min            : -1.#IND
+alpha                          : 30(+blat)
+algorithm                      : 2(-graphlet;+pheromone;)
+local search                   : 1
+
+start try 1 ...
+0 : 0(0,0,0)
+1 : 0(0,0,0)
+2 : 0(0,0,0)
+3 : 0(0,0,0)
+4 : 0(0,0,0)
+5 : 0(0,0,0)
+6 : 0(0,0,0)
+7 : 0(0,0,0)
+8 : 0(0,0,0)
+9 : 0(0,0,0)
+10 : 0(0,0,0)
+11 : 0(0,0,0)
+12 : 0(0,0,0)
+13 : 0(0,0,0)
+14 : 0(0,0,0)
+Best Solution in try   1 is 0(0,0,0) at iterations 0 time 0
+Best : 0(0,0,0) Worst : 0 Avg : 0
+time total : 0.029s

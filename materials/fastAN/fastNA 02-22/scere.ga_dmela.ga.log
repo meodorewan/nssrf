@@ -1,0 +1,25 @@
+An Ant Colony Optimization for Graph Alignment Problem
+Graph 1                        : scere.ga
+Graph 2                        : dmela.ga
+Output File                    : scere.ga_dmela.ga.out
+(V1,E1)                        : (5499,31261)
+(V2,E2)                        : (7518,25635)
+
+Parameter-settings
+max-tries                      : 1
+max-time                       : 0s
+number of iteration            : 1
+num-ants                       : 1
+rho                            : 0.8
+trail_max/trail_min            : 13017
+trail_mid/trail_min            : 1
+alpha                          : 0.001(0.999*blat)
+algorithm                      : 2(-graphlet;+pheromone;)
+local search                   : 1
+
+start try 1 ...
+0 : 123.889(3424,2192,2525) -> 125.632(3421,2195,2522) -> 125.983(3313,2144,2452)
+Iteration     0 time  96.425 -----> Best : 125.983(3313,2144,2452)
+Best Solution in try   1 is 125.983(3313,2144,2452) at iterations 0 time 96.425
+Best : 125.983(3313,2144,2452) Worst : 125.983 Avg : 125.983
+time total : 98.022s
